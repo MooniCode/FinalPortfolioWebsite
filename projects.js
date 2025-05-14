@@ -8,11 +8,11 @@ const projects = [
         video: "Videos/VID_BirdAssault.mp4",
         description: "A little game where you collect worms and avoid obstacles.",
         date: "29/12/2023",
-        link: "Projects/birdAssault.html"
+        link: "birdAssault.html"
     },
     {
         id: 2,
-        title: "Diorama",
+        title: "Seaside diorama",
         category: "Art",
         image: "Images/IMG_Diorama.jpg",
         video: "Videos/VID_Diorama.mp4",
@@ -22,23 +22,43 @@ const projects = [
     },
     {
         id: 3,
-        title: "Bird Assault",
-        category: "Games",
-        image: "PD1_BirdAssault.png",
-        video: "bird_assault_video.mp4", // Added video property
-        description: "A little game where you collect worms and avoid obstacles.",
-        date: "2023-01-15",
-        link: "Projects/birdAssault.html"
+        title: "Plugger the robot",
+        category: "Art",
+        image: "Images/IMG_Robuddy.png",
+        video: "Videos/VID_Robuddy.mp4",
+        description: "He is a walking cable extender!",
+        date: "08/12/2024",
+        link: "Projects/robuddy.html"
     },
     {
         id: 4,
-        title: "Test Project",
-        category: "Games",
-        image: "PD1_BirdAssault.png",
-        video: "test_project_video.mp4", // Added video property
+        title: "The Monopolist",
+        category: "Art",
+        image: "Images/IMG_Kart.png",
+        video: "Videos/VID_Kart.mp4",
         description: "A small game made for my final exam of programming. In this game you play is a bird who has to collect worms and bring them back to his nest. However there are dangerous obstacles that will need to be avoided.",
-        date: "2023-01-15",
+        date: "16/01/2025",
         link: "Projects/birdAssault.html"
+    },
+    {
+        id: 5,
+        title: "Two Left Jams",
+        category: "Games",
+        image: "Images/IMG_TwoLeftJams.jpg",
+        video: "Videos/VID_TwoLeftJams.mp4",
+        description: "Basically just.. make a sandwich! <br> <br> This game was made by me and 4 friends for a game jam organised by DAE. It won us the first place out of over 20 other teams.",
+        date: "03/04/2025",
+        link: "Projects/twoLeftJams.html"
+    },
+    {
+        id: 6,
+        title: "Windmill Scene",
+        category: "Art",
+        image: "Images/IMG_Windmill.png",
+        video: "Videos/VID_Windmill.mp4",
+        description: "Basically just.. make a sandwich! <br> <br> This game was made by me and 4 friends for a game jam organised by DAE. It won us the first place out of over 20 other teams.",
+        date: "03/04/2025",
+        link: "Projects/twoLeftJams.html"
     },
 ];
 
@@ -56,7 +76,6 @@ function createProjectCard(project) {
                     <h3 class="project-title">${project.title}</h3>
                     <p class="project-description">${project.description}</p>
                     <p class="project-date">${project.date}</p>
-                    <button class="view-project-btn">View Project</button>
                 </div>
             </a>
         </div>

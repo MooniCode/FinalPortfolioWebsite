@@ -85,3 +85,62 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }, 5000);
 });
+
+    // Initialize contact form animations
+    document.addEventListener('DOMContentLoaded', function() {
+        // Add animation for skill bars (from your existing code)
+        const skillLevels = document.querySelectorAll('.skill-level');
+        setTimeout(() => {
+            skillLevels.forEach(level => {
+                const dataLevel = level.getAttribute('data-level');
+                level.style.width = dataLevel + '%';
+            });
+        }, 500);
+        
+        // Contact form animation
+        const contactForm = document.querySelector('.contact-form');
+        const formGroups = document.querySelectorAll('.form-group');
+        
+        if (contactForm) {
+            // Add animation to form elements
+            formGroups.forEach((group, index) => {
+                group.style.animationDelay = (index * 0.1) + 's';
+                group.classList.add('fade-in');
+            });
+            
+            // Form validation
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // You would typically handle form submission with AJAX here
+                // For now, just show a success message
+                const submitBtn = document.querySelector('.submit-btn');
+                submitBtn.innerHTML = 'Message Sent!';
+                submitBtn.classList.add('success');
+                
+                // Reset form after delay
+                setTimeout(() => {
+                    contactForm.reset();
+                    submitBtn.innerHTML = 'Send Message';
+                    submitBtn.classList.remove('success');
+                }, 3000);
+            });
+        }
+    });
+    
+    // Intersection Observer for animation when scrolling
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, { threshold: 0.1 });
+    
+    // Observe contact cards
+    document.addEventListener('DOMContentLoaded', function() {
+        const contactCards = document.querySelectorAll('.contact-card');
+        contactCards.forEach(card => {
+            observer.observe(card);
+        });
+    });
